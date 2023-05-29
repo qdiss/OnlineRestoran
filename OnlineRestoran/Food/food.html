@@ -1,0 +1,313 @@
+<?php include ('server.php') ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../slike/VeggieGrill-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <title>VeggieGrill | Salata</title>
+</head>
+<body>
+    
+    <header> <!-- Kreiranje Headera-->
+
+        <div class="header">
+
+            <div class="headerbar"> <!-- Tab za Ikone koje su RESPONZIVNE -->
+                <div class="account"> <!-- Kreiranje responzivnog taba za ikone -->
+                    <ul>
+                        <a href=""> <!-- Ikona kuce/ Home -->
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+
+                        <a href="#"> <!-- Ikona Pretrazi -->
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+
+                        <div class="search" id="searchinput1"> <!-- Search Box za responzivni tab -->
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+
+                    </ul>
+                </div>
+
+                <div class="nav"> <!-- Navigacijski Tabovi koji su -->
+                    <ul>
+                        <a href=""> 
+                            <li>Home</li>
+                        </a>
+                        <a href=""> 
+                            <li>About</li>
+                        </a>
+                        <a href=""> 
+                            <li>Salata</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="logo"> <!-- Kreiranje Logo-a-->
+                <img src="../slike/VeggieGrill-1.png" alt="">
+            </div>
+
+            <div class="bar"> <!-- Male ikonice gornji desni ugao -->
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+
+            <div class="nav"> <!-- Navigacijski Tabovi -->
+                <ul>
+                    <a href="../index.html">
+                        <li>Home</li> 
+                    </a>
+                    <a href="../About/about.html">
+                        <li>O nama</li> 
+                    </a>
+                    <a href="#">
+                        <li>Jelovnik</li> 
+                    </a>
+                </ul>
+            </div>
+
+            <div class="account"> <!-- Tab za Kreiranje/Login Racuna -->
+                <ul> <!-- Lista za sve ikonice u headeru -->
+                    <a href="#"> <!-- Ikonica Kuce -->
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i> 
+                        </li>
+                    </a>
+                    <a href="#"> <!-- Ikonica Pretrazi -->
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i> 
+                        </li>
+                    </a>
+
+                    <div class="search" id="searchinput2"> <!-- Input/ Search Bar -->
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+
+                    <button class="btnContact-popup"><li><i class="fa-solid fa-phone" style="color: #000000;"></i></li></button>
+
+                    <button class="btnLogin-popup"><i class="fa-solid fa-user" id="user-mb"></i></button>
+
+                </ul>
+            </div>
+        </div>
+
+        
+    </header>
+
+
+
+    <div class="food_menu" style="background-color: #bface2;"> <!-- Izbor Hrane Div -->
+
+
+<div class="zaslon" style="display: none;"></div> <!-- Dodajemo overlay iznad glavne pozadine -->
+
+<div class="contactContainer" style="display: none;">
+    <div class="contact-box">
+        <div class="left">
+            <img src="" alt="">
+        </div>
+        <div class="right">
+                <span class="icon-close">
+                    <ion-icon name="closeMe" style="color: #FFF"></ion-icon>
+                </span>
+                <h2>Contact Us</h2>
+                <input type="text" id="ime" class="field" placeholder="Ime i Prezime" required>
+                <input type="text" id="email" class="field" placeholder="E-Mail" required>
+                <input type="text" id="brojtelefona" class="field" placeholder="Broj Telefona" required>
+                <textarea id="message" placeholder="Poruka" class="field"></textarea>
+                <button id="sendMessage" class="red_btn" onclick="sendMail()">Pošalji</button>
+        </div>
+    </div>
+</div>
+          
+    
+
+<div class="wrapper">
+
+            <span class="icon-close">
+                <ion-icon name="close" id="closeIcon" style="color:#FFF"></ion-icon>
+            </span>
+    
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="" method="post">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" id="email" class="form-control" name="email" required >
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" id="password" class="form-control" name="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember Me</label>
+                        <a href="#">Forgot Password</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+    
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="" method="post">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" required name="username">
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required name="email">
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required name="password">
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">I agree to the terms & conditions</label>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+    
+        </div>
+
+        <section class="cartContainer content-section">
+            
+            <h2 class="section-header">Izbor Hrane</h2>
+
+            <div class="filter-bar">
+                <div class="dropdown">
+                  <div class="select">
+                    <div class="caret"></div>
+                    <span class="selected">Kategorije</span>
+                  </div>
+                  <ul class="menu">
+                    <li data-filter="Sve">Sve</li>
+                    <li data-filter="Doručak">Doručak</li>
+                    <li data-filter="Ručak">Ručak</li>
+                    <li data-filter="Večera">Večera</li>
+                    <li data-filter="Desert">Desert</li>
+                    <li data-filter="Pića">Pića</li>
+                    <li data-filter="Special Menu">Special Menu</li>
+                  </ul>
+                </div>
+                <div class="search-bar">
+                    <div class="filter-icon">
+                        <i class="ikonaTrazi fa-solid fa-magnifying-glass"></i>
+                      </div>
+                  <input type="text" class="search-input" placeholder="Pretraži...">
+                </div>
+              </div>
+              
+              
+            <div class="shop-items" id="shopItemsContainer">
+                <div class="shop-item" data-filter="Doručak">
+                    <span class="shop-item-title">artikal 1</span>
+                    <img class="shop-item-image" src="../slike/chef2.png" alt="">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$12.99</span>
+                        <p class="shop-item-description">Govedina, Sir, Namazi, Salata</p>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section class="cartContainer content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+        
+    </div>
+
+    <footer class="footer"> <!-- Kreiranje Footer -->
+
+        <div class="footer-container"> <!-- Kontejner -->
+
+         <div class="row"> <!-- Redovi -->
+
+           <div class="footer-col"> <!-- Div za vodenje na ostale sajtove -->
+             <h4>VeggieGrill</h4>
+             <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="./About/about.html">O Nama</a></li>
+               <li><a href="./Food/food.html">Jelovnik</a></li>
+               <li><a href="#">Narudžba</a></li>
+             </ul>
+           </div>
+
+           <div class="footer-col">
+             <h4>Zatražite Pomoć</h4> <!-- Div za Help -->
+             <ul>
+               <li><a href="#">FAQ</a></li>
+               <li><a href="#">Dostava</a></li>
+               <li><a href="#">Povratak</a></li>
+               <li><a href="#">Status Narudžbe</a></li>
+               <li><a href="#">Način Plaćanja</a></li>
+             </ul>
+           </div>
+
+            <div class="footer-col"> <!-- Div za Online Orders -->
+             <h4>Naša Lokacija</h4>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91527.22074063178!2d17.850581778665994!3d44.202418784891215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ee26b2c197a21%3A0x58a707c9607b8702!2sZenica!5e0!3m2!1sen!2sba!4v1681658731458!5m2!1sen!2sba" width="170" height="138" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+           <div class="footer-col"> <!-- Div za Ikone Footera -->
+             <h4>Pratite nas</h4>
+             <div class="social-links">
+               <a href="https://www.facebook.com/ptf.zenica"><i class="fab fa-facebook-f"></i></a>
+               <a href="https://ptf.unze.ba"><i class="fab fa-twitter"></i></a>
+               <a href="https://www.youtube.com/@univerzitetuzenici2280"><i class="fab fa-youtube"></i></a>
+               <a href="https://www.linkedin.com/company/politehni%C4%8Dki-fakultet-univerziteta-u-zenici/"><i class="fab fa-linkedin-in"></i></a>
+             </div>
+           </div>
+
+         </div>
+
+        </div>
+
+    </footer>
+
+    <script src="../Food/hrana.json"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../Food/script.js"></script>
+    
+</body>
+</html>

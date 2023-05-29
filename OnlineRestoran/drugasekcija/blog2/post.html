@@ -1,0 +1,213 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsFlash | Post</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png">
+    <!-- Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Swiper.js styles -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header> <!-- Kreiranje Headera-->
+
+        <div class="header">
+    
+             <div class="logo"> <!-- Kreiranje Logo-a-->
+                    <img src="/slike/VeggieGrill-1.png" alt="">
+            </div>
+    
+            <div class="nav"> <!-- Navigacijski Tabovi -->
+                    <ul>
+                        <a href="#">
+                            <li>Home</li> <!--Ukoliko zelis prevedi ovo - OBAVEZNO OBRISI OVO -->
+                        </a>
+                        <a href="#">
+                            <li>O nama</li> <!--Ukoliko zelis prevedi ovo - OBAVEZNO OBRISI OVO -->
+                        </a>
+                        <a href="#">
+                            <li>Jelovnik</li> <!--Ukoliko zelis prevedi ovo - OBAVEZNO OBRISI OVO -->
+                        </a>
+                        <a href="#">
+                            <li>Blog</li> <!--Ukoliko zelis prevedi ovo - OBAVEZNO OBRISI OVO -->
+                        </a>
+                    </ul>
+             </div>
+    
+            <div class="account"> <!-- Tab za Kreiranje/Login Racuna -->
+                    <ul> <!-- Lista za sve ikonice u headeru -->
+    
+                        <button class="btn place-items-center" id="search-icon">
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="search-icon"></i> 
+                        </button>
+    
+                        <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                            <i class="ri-menu-3-line open-menu-icon"></i>
+                            <i class="ri-close-line close-menu-icon"></i>
+                        </button>
+    
+                        <button class="btnContact-popup"><li><i class="fa-solid fa-envelope"></i></li></button>
+    
+                    </ul>
+            </div>
+    
+        </div>
+            
+        </header>
+    
+        <!-- Search -->
+        <div class="search-form-container container" id="search-form-container">
+    
+            <div class="form-container-inner">
+    
+                <form action="" class="form">
+                    <input class="form-input" type="text" placeholder="What are you looking for?">
+                    <button class="btn form-btn" type="submit">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </form>
+                <span class="form-note">Or press ESC to close.</span>
+    
+            </div>
+    
+            <button class="btn form-close-btn place-items-center" id="form-close-btn">
+                <i class="ri-close-line"></i>
+            </button>
+    
+        </div>
+    
+            <!-- Contact Form -->
+        <div class="overlayPozadina"></div><!-- Dodajemo overlay iznad glavne pozadine -->
+            <div class="containerPozadina" style="display: none;">
+                <div class="contact-box">
+                    <div class="left">
+                        <img src="" alt="">
+                    </div>
+                    <div class="right">
+                        <span class="icon-close">
+                            <ion-icon name= "close" style="color:#FFF"></ion-icon>
+                        </span>
+                        <h2>Contact Us</h2>
+                        <input type="text" id="ime" class="field" placeholder="Ime i Prezime" required>
+                        <input type="text" id="email" class="field" placeholder="E-Mail" required>
+                        <input type="text" id="brojtelefona" class="field" placeholder="Broj Telefona" required>
+                        <textarea id="message" placeholder="Poruka" class="field"></textarea>
+                        <button id="sendMessage" class="red_btn" onclick="sendMail()">Pošalji</button>
+                    </div>
+                </div>
+            </div>
+    <section class="blog-post section-header-offset">
+        <div class="blog-post-container container">
+            <div class="blog-post-data">
+                <h3 class="title blog-post-title">Is VR the future?</h3>
+                <div class="article-data">
+                    <span>Dec 6th 2021</span>
+                    <span class="article-data-spacer"></span>
+                    <span>4 Min read</span>
+                </div>
+                <img src="./assets/images/featured/featured-1.jpg" alt="">
+            </div>
+
+            <div class="container">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eius possimus hic eligendi distinctio rerum incidunt, esse quasi eum molestiae ducimus ipsam quae, aliquid ullam placeat dolorum nulla vero. Quam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente repellat consequatur culpa, repudiandae aut dolores iusto. Rem natus soluta, dolores, ad deleniti, aut dolorem corrupti quasi amet unde delectus hic?
+                </p>
+                
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eius possimus hic eligendi distinctio rerum incidunt, esse quasi eum molestiae ducimus ipsam quae, aliquid ullam placeat dolorum nulla vero. Quam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero quod necessitatibus, aspernatur pariatur asperiores earum quas adipisci veritatis quidem facilis! Nihil veniam quaerat nulla possimus, asperiores vero voluptatum placeat. Eveniet!
+                </p>
+
+                <blockquote class="quote">
+                    <p><span><i class="ri-double-quotes-l"></i></span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptates, laboriosam voluptatum quos non consequuntur nesciunt necessitatibus tempora quod inventore corporis rem nihil itaque, at provident minus aliquam veritatis. Labore?  <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>
+            
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eius possimus hic eligendi distinctio rerum incidunt, esse quasi eum molestiae ducimus ipsam quae, aliquid ullam placeat dolorum nulla vero. Quam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero quod necessitatibus, aspernatur pariatur asperiores earum quas adipisci veritatis quidem facilis! Nihil veniam quaerat nulla possimus, asperiores vero voluptatum placeat. Eveniet!
+                </p>
+
+                <div class="author d-grid">
+                    <div class="author-image-box">
+                        <img src="./assets/images/author.jpg" alt="" class="article-image">
+                    </div>
+                    <div class="author-about">
+                        <h3 class="author-name">John Doe</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quis repellat rerum, possimus cumque dolor repellendus eligendi atque explicabo exercitationem id.</p>
+                        <ul class="list social-media">
+                            <li class="list-item">
+                                <a href="#" class="list-link"><i class="ri-instagram-line"></i></a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="list-link"><i class="ri-facebook-circle-line"></i></a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="list-link"><i class="ri-twitter-line"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+        <footer class="footer"> <!-- Kreiranje Footer -->
+
+            <div class="footer-container"> <!-- Kontejner -->
+    
+             <div class="row"> <!-- Redovi -->
+    
+               <div class="footer-col"> <!-- Div za vodenje na ostale sajtove -->
+                 <h4>VeggieGrill</h4>
+                 <ul>
+                   <li><a href="#">Home</a></li>
+                   <li><a href="./About/about.html">O Nama</a></li>
+                   <li><a href="./Food/food.html">Jelovnik</a></li>
+                   <li><a href="#">Narudžba</a></li>
+                 </ul>
+               </div>
+    
+               <div class="footer-col">
+                 <h4>Zatražite Pomoć</h4> <!-- Div za Help -->
+                 <ul>
+                   <li><a href="#">FAQ</a></li>
+                   <li><a href="#">Dostava</a></li>
+                   <li><a href="#">Povratak</a></li>
+                   <li><a href="#">Status Narudžbe</a></li>
+                   <li><a href="#">Način Plaćanja</a></li>
+                 </ul>
+               </div>
+    
+                <div class="footer-col"> <!-- Div za Online Orders -->
+                 <h4>Naša Lokacija</h4>
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91527.22074063178!2d17.850581778665994!3d44.202418784891215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ee26b2c197a21%3A0x58a707c9607b8702!2sZenica!5e0!3m2!1sen!2sba!4v1681658731458!5m2!1sen!2sba" width="170" height="138" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+    
+               <div class="footer-col"> <!-- Div za Ikone Footera -->
+                 <h4>Pratite nas</h4>
+                 <div class="social-links">
+                   <a href="https://www.facebook.com/ptf.zenica"><i class="fab fa-facebook-f"></i></a>
+                   <a href="https://ptf.unze.ba"><i class="fab fa-twitter"></i></a>
+                   <a href="https://www.youtube.com/@univerzitetuzenici2280"><i class="fab fa-youtube"></i></a>
+                   <a href="https://www.linkedin.com/company/politehni%C4%8Dki-fakultet-univerziteta-u-zenici/"><i class="fab fa-linkedin-in"></i></a>
+                 </div>
+               </div>
+    
+             </div>
+    
+            </div>
+    
+        </footer>
+
+    <!-- Swiper.js -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- Custom script -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

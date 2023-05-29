@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="./slike/VeggieGrill-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("Ot7YyQqL9THZBCfD9");
+        })();
+    </script>
+    <title>VeggieGrill</title>
+</head>
+<body>
+    
+    
+    <header> <!-- Kreiranje Headera-->
+
+        <div class="header">
+            
+            <div class="headerbar"> <!-- Tab za Ikone koje su RESPONZIVNE -->
+                <div class="account"> <!-- Kreiranje responzivnog taba za ikone -->
+                    <ul>
+                        <a href=""> <!-- Ikona kuce/ Home -->
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+
+                        <a href="#"> <!-- Ikona Pretrazi -->
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+
+                        <div class="search" id="searchinput1"> <!-- Search Box za responzivni tab -->
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+
+                    </ul>
+                </div>
+
+                <div class="nav"> <!-- Navigacijski Tabovi koji su RESPONZIVNI-->
+                    <ul>
+                        <a href=""> <!--Ukoliko zelis prevedi ovo - OBAVEZNO OBRISI OVO -->
+                            <li>Home</li>
+                        </a>
+                        <a href=""> <!--Ukoliko zelis prevedi ovo - OBAVEZNO OBRISI OVO -->
+                            <li>About</li>
+                        </a>
+                        <a href=""> <!--Ukoliko zelis prevedi ovo - OBAVEZNO OBRISI OVO -->
+                            <li>Food Menu</li>
+                        </a>
+                        <a href=""> <!--Ukoliko zelis prevedi ovo - OBAVEZNO OBRISI OVO -->
+                            <li>Order</li> 
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="logo"> <!-- Kreiranje Logo-a-->
+                <img src="./slike/VeggieGrill-1.png" alt="">
+            </div>
+
+            <div class="bar"> <!-- Male ikonice gornji desni ugao -->
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+
+            <div class="nav"> <!-- Navigacijski Tabovi -->
+                <ul>
+                    <a href="#">
+                        <li>Home</li> <!--Ukoliko zelis prevedi ovo - OBAVEZNO OBRISI OVO -->
+                    </a>
+                    <a href="About/about.html">
+                        <li>O nama</li> <!--Ukoliko zelis prevedi ovo - OBAVEZNO OBRISI OVO -->
+                    </a>
+                    <a href="Food/food.html">
+                        <li>Jelovnik</li> <!--Ukoliko zelis prevedi ovo - OBAVEZNO OBRISI OVO -->
+                    </a>
+                </ul>
+            </div>
+
+            <div class="account"> <!-- Tab za Kreiranje/Login Racuna -->
+                <ul> <!-- Lista za sve ikonice u headeru -->
+
+                    <a href="#"> <!-- Ikonica Pretrazi -->
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i> 
+                        </li>
+                    </a>
+
+                    <button class="btnContact-popup"><li><i class="fa-solid fa-envelope" style="color: #000000;"></i></li></button>
+
+                    <div class="search" id="searchinput2"> <!-- Input/ Search Bar -->
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+
+                    <button class="btnLogin-popup"><li><i class="fa-solid fa-user" id="user-mb"></i></li></button>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="overlay"></div> <!-- Dodajemo overlay iznad glavne pozadine -->
+    <div class="container" style="display: none;">
+        <div class="contact-box">
+            <div class="left">
+                <img src="" alt="">
+            </div>
+            <div class="right">
+                <span class="icon-close">
+                    <ion-icon name= "close" style="color:#FFF"></ion-icon>
+                </span>
+                <h2>Contact Us</h2>
+                <input type="text" id="ime" class="field" placeholder="Ime i Prezime" required>
+                <input type="text" id="email" class="field" placeholder="E-Mail" required>
+                <input type="text" id="brojtelefona" class="field" placeholder="Broj Telefona" required>
+                <textarea id="message" placeholder="Poruka" class="field"></textarea>
+                <button id="sendMessage" class="red_btn" onclick="sendMail()">Pošalji</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+
+        <span class="icon-close">
+            <ion-icon name= "close" style="color:#FFF"></ion-icon>
+        </span>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" id="login_email" class="form-control" name="email" required >
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="login_password" class="form-control" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember Me</label>
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button type="button"  id="login" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form>
+<!--                 <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" id="username" required name="username">
+                    <label>Username</label>
+                </div> -->
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email"  id="register_email" required name="email">
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password"  id="register_password" required name="password">
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">I agree to the terms & conditions</label>
+                </div>
+                <button type="button" id="register" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <div class="home"> <!-- Kreiranje Home Stranice -->
+        
+        <div class="main_slide"> <!-- Glavni Slide -->
+
+            <div>
+                <h1>Uživajte u<span> ukusnoj hrani</span> u vašem zdravom životu.</h1>
+                <p>Naša hrana je ukusna i zdrava, pripremljena od visokokvalitetnih sastojaka. Uživajte u najboljim okusima hrane bez osjećaja krivnje ili straha od narušavanja vašeg zdravog načina života. Hranjiva i ukusna hrana - priuštite si najbolje!</p>  <!-- ChatGPT je ovo napisao -->
+           
+                <a href="https://www.youtube.com/watch?v=rEq1Z0bjdwc"><button class="red_btn">Posjetite Odma <i class="fa-solid fa-arrow-right-long"></i></button></a> <!-- Dugme vodi na GOOGLE MAPS - PREVESTI UKOLIKO ZELIS-->
+            </div>
+
+            <div>
+                <img src="./slike/food plate.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="food-items"> <!-- Div za Slike Hrane -->
+
+            <div class="item"> <!-- Slika Lijevo -->
+                <div>
+                    <img src="./slike/item1.jpg" alt="food item">
+                </div>
+                <h3>Gulaš</h3> 
+                <p>Pikantno, aromatično, bogato, mesnato, tradicionalno</p> <!-- GPT Napisao -->
+                <button class="white_btn">Pogledaj Meni</button>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="./slike/item2.png" alt="food item"> <!-- Slika Sredina -->
+                </div>
+                <h3>Hamburger Special</h3>
+                <p>Sočno meso, hrskavo povrće, mekano pecivo! Ukusan, zasitan, popularan, savršen za brzi obrok.</p> <!-- GPT i ovo .. -->
+                <button class="red_btn">Pogledaj Meni</button>
+            </div>
+
+            <div class="item"> <!-- Slika Desno -->
+                <div>
+                    <img src="./slike/item3.png" alt="food item"> 
+                </div>
+                <h3>Riba </h3>
+                <p>Svježa i zdrava, lagana i hranjiva! </p>
+                <button class="white_btn">Pogledaj Meni</button>
+            </div>
+
+        </div>
+
+        <div class="main_slide2"> <!--Slide Ispod Food Menu-a-->
+
+            <div class="foodimg"> <!-- DIV ZA SLIKE -->
+                <img src="./slike/plate1.png" alt=""> <!-- Slika koje se pokazuju sa lijeve strane ispod Food Menu -->
+            </div>
+
+            <div class="question">
+                <div>
+                    <h2>Zašto ljudi biraju nas?</h2>
+                </div>
+
+        <div> <!-- Div Slika -->
+
+                    <div class="q-ans"> <!-- Slika 2 koje se pokazuju jedna ispod druge ispod Food Menu -->
+
+                        <div>
+                            <img src="./slike/plate2.png" alt="">
+                        </div>
+
+                        <div>
+                            <h4>Veggie Piletina</h4> <!-- ChatGPT je ovo napisao!! -->
+                            <p>Naša piletina sa rizom je ukusna, hranjiva i zdrava opcija za bilo koji obrok. 
+                                Pripremljena od najkvalitetnijih sastojaka, 
+                                kombinacija piletine i riže stvara savršen balans okusa i nutritivne vrijednosti.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="q-ans"><!-- Slika 3 koje se pokazuju jedna ispod druge ispod Food Menu -->
+
+                        <div>
+                            <img src="./slike/plate3.png" alt="">
+                        </div>
+
+                        <div>
+                            <h4>Veggie Doručak</h4> <!-- ChatGPT je ovo napisao!! -->
+                            <p>Naš VeggieDoručak je ukusan i hranjiv način započinjanja dana. 
+                               Pripremljeni od svježih sastojaka, naši kuhari pažljivo pripremaju jaja kako bi bila savršeno mekana. 
+                               Servirana uz svježu zelenu salatu, ovo jelo pruža savršen balans okusa i nutritivnih vrijednosti.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="q-ans"><!-- Slika 4 koje se pokazuju jedna ispod druge ispod Food Menu -->
+
+                        <div>
+                            <img src="./slike/plate4.png" alt="">
+                        </div>
+
+                        <div>
+                            <h4>Veggie Losos</h4> <!-- ChatGPT je ovo napisao!! -->
+                            <p>Losos je raskošno jelo koje privlači gurmane zbog svog intenzivnog okusa i hranjivih vrijednosti.
+                                Poslužen uz raznoliku svježu salatu i priloge po vašem izboru, ovo jelo pruža savršen balans okusa i nutritivnih vrijednosti.
+                            </p>
+                        </div>
+
+                    </div>
+
+            </div>
+            </div>
+            
+        </div>
+
+        <div class="main_slide3"> <!-- Div od nasih preporuka -->
+
+            <div class="fav-head"> <!-- Najdraza Jela Poredani -->
+                <h3>Naša Najpopularnija Jela</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quia ab, recusandae odit corporis explicabo ipsam qui atque possimus libero.</p>
+            </div>
+
+            <div class="fav-food"> <!-- Tabela Najdrazih Jela-->
+
+                <div class="item"> <!-- Špagete -->
+                    <div>
+                        <img src="./slike/plate1.png" alt="">
+                    </div>
+                    <h3>Veggie Špagete</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, beatae!</p>
+                    <p class="fav-price">7.00 KM</p>
+                </div>
+
+                <div class="item"> <!-- Piletina -->
+                    <div>
+                        <img src="./slike/plate2.png" alt="">
+                    </div>
+                    <h3>Veggie Piletina</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, beatae!</p>
+                    <p class="fav-price">5.50 KM</p>
+                </div>
+
+                <div class="item"> <!-- Doručak -->
+                    <div>
+                        <img src="./slike/plate3.png" alt="">
+                    </div>
+                    <h3>Veggie Doručak</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, beatae!</p>
+                    <p class="fav-price">6.90 KM</p>
+                </div>
+
+                <div class="item"> <!-- Losos -->
+                    <div>
+                        <img src="./slike/plate4.png" alt="">
+                    </div>
+                    <h3>Veggie Losos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, beatae!</p>
+                    <p class="fav-price">9.50 KM</p>
+                </div>
+
+            </div>
+
+            <div class="dsgn"></div>
+        </div>
+        
+        <div class="main_slide4"> <!-- Div oko Kuhara i Feedback Kupaca -->
+            
+            <div class="chef-feed"> <!-- Recenzije Kupca Text -->
+                <h2>Zadovoljstvo <span style="color: #645CBB">Kupaca</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In esse sequi, placeat, repellat,
+                    quae repudiandae odio itaque officiis iusto accusantium molestias libero ipsam dolorum quidem 
+                    saepe deleniti possimus consequatur asperiores veniam rem molestiae illo nihil tempora.
+                    Fugiat, architecto! Accusamus porro asperiores eos molestias atque ullam minus pariatur nisi officiis dolores.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur debitis necessitatibus 
+                    sapiente accusamus exercitationem corporis hic quibusdam.
+                    Nemo minima minus unde dicta, cupiditate quia modi inventore cum labore illo magni, 
+                    vitae veniam vel in illum ipsa architecto consequuntur accusantium ratione sit nihil rerum, 
+                    atque repellat. Similique nesciunt tempore quas voluptate impedit natus amet, suscipit officiis?</p>
+                
+                    <div class="chef-detail"> <!-- Detalji o Kuharu -->
+                        <div>
+                            <img src="./slike/VeggieGrill-1.png" alt="">
+                        </div>
+
+                        <div> <!-- Naziv Restorana i logotip -->
+                            <h6>VeggieGrill</h6>
+                            <p>Online Restoran</p>
+                        </div>
+                    </div>  
+
+                    <div class="chef-vic">
+                        <div> <!-- Div za Kuharove recenzije -->
+                            <i class="fa-solid fa-hand-peace"></i>
+                            <h4>14</h4>
+                            <p>Pohvala od gastro-kritičara</p>
+                        </div>
+
+                        <div> <!-- Div za Trofeje Kuharove -->
+                            <i class="fa-solid fa-trophy"></i> 
+                            <h4>78</h4>
+                            <p>Osvojenih 1. mjesta na takmičenjima.</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="chef"> <!-- Kuhar i slika -->
+                        <img src="./slike/chef.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="letter"> <!-- E-mail Pismo -->
+
+            <div class="letter-head"> <!-- Text Lijevo -->
+                <h2>Posaljite nam <span>E-Mail</span></h2>
+            </div>
+
+            <div class="letter-input"> <!-- Salje Pismo -->
+                <div>
+                    <input type="email" placeholder="VasEmail@mail.com">
+                </div>
+
+                <button class="red_btn">Pošaljite</button> <!-- Dugme za submit -->
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer"> <!-- Kreiranje Footer -->
+
+        <div class="footer-container"> <!-- Kontejner -->
+
+         <div class="row"> <!-- Redovi -->
+
+           <div class="footer-col"> <!-- Div za vodenje na ostale sajtove -->
+             <h4>VeggieGrill</h4>
+             <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="./About/about.html">O Nama</a></li>
+               <li><a href="./Food/food.html">Jelovnik</a></li>
+               <li><a href="#">Narudžba</a></li>
+             </ul>
+           </div>
+
+           <div class="footer-col">
+             <h4>Zatražite Pomoć</h4> <!-- Div za Help -->
+             <ul>
+               <li><a href="#">FAQ</a></li>
+               <li><a href="#">Dostava</a></li>
+               <li><a href="#">Povratak</a></li>
+               <li><a href="#">Status Narudžbe</a></li>
+               <li><a href="#">Način Plaćanja</a></li>
+             </ul>
+           </div>
+
+            <div class="footer-col"> <!-- Div za Online Orders -->
+             <h4>Naša Lokacija</h4>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91527.22074063178!2d17.850581778665994!3d44.202418784891215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ee26b2c197a21%3A0x58a707c9607b8702!2sZenica!5e0!3m2!1sen!2sba!4v1681658731458!5m2!1sen!2sba" width="170" height="138" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+           <div class="footer-col"> <!-- Div za Ikone Footera -->
+             <h4>Pratite nas</h4>
+             <div class="social-links">
+               <a href="https://www.facebook.com/ptf.zenica"><i class="fab fa-facebook-f"></i></a>
+               <a href="https://ptf.unze.ba"><i class="fab fa-twitter"></i></a>
+               <a href="https://www.youtube.com/@univerzitetuzenici2280"><i class="fab fa-youtube"></i></a>
+               <a href="https://www.linkedin.com/company/politehni%C4%8Dki-fakultet-univerziteta-u-zenici/"><i class="fab fa-linkedin-in"></i></a>
+             </div>
+           </div>
+
+         </div>
+
+        </div>
+
+    </footer>   
+      
+
+    
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCPqB4X0CSJnwMOfh78CnzTZ6Z4HDuXbrI",
+      authDomain: "veggiegrill-qdiss.firebaseapp.com",
+      projectId: "veggiegrill-qdiss",
+      storageBucket: "veggiegrill-qdiss.appspot.com",
+      messagingSenderId: "836536225182",
+      appId: "1:836536225182:web:6039c5243deda2fa8e1a8f",
+      measurementId: "G-25TD81Y67P"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const database = getDatabase(app);
+      
+    console.log(app);
+
+    const auth = getAuth();
+    //----- New Registration code start	  
+	  document.getElementById("register").addEventListener("click", function() {
+		  var email =  document.getElementById("register_email").value;
+		  var password = document.getElementById("register_password").value;
+		  //For new registration
+		  createUserWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    // Signed in 
+		    const user = userCredential.user;
+		    console.log(user);
+		    alert("Registration successfully!!");
+		    // ...
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    // ..
+		    console.log(errorMessage);
+		    alert(error);
+		  });		  		  
+	  });
+	  //----- End
+
+      //----- Login code start	  
+	  document.getElementById("login").addEventListener("click", function() {
+		  var email =  document.getElementById("login_email").value;
+		  var password = document.getElementById("login_password").value;
+
+		  signInWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    // Signed in 
+		    const user = userCredential.user;
+		    console.log(user);
+		    alert(user.email+" Login successfully!!!");
+		    document.getElementById('logout').style.display = 'block';
+		    // ...
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    console.log(errorMessage);
+		  });
+          
+          window.location = 'index.html';
+	  });
+	  //----- End
+
+</script>
+<script src="index.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>

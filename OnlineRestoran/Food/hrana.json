@@ -1,0 +1,77 @@
+{
+    "shopItems": [
+      {
+        "title": "Album 1",
+        "image": "../slike/food4.jpg",
+        "category": "Ručak",
+        "price": "$12.99",
+        "description": "Govedina, Sir, Namazi, Salata",
+        "buttonText": "ADD TO CART"
+      },
+      {
+        "title": "Album 2",
+        "image": "../slike/food5.jpg",
+        "category": "Doručak",
+        "price": "$8.99",
+        "description": "Jaja, Hleb, Maslac, Marmelada",
+        "buttonText": "ADD TO CART"
+      },
+      {
+        "title": "Album 3",
+        "image": "../slike/food6.jpg",
+        "category": "Doručak",
+        "price": "$8.99",
+        "description": "Jaja, Hleb, Maslac, Marmelada",
+        "buttonText": "ADD TO CART"
+      },
+      {
+        "title": "Album 4",
+        "image": "../slike/food7.jpg",
+        "category": "Doručak",
+        "price": "$8.99",
+        "description": "Jaja, Hleb, Maslac, Marmelada",
+        "buttonText": "ADD TO CART"
+      },
+      {
+        "title": "Album 5",
+        "image": "../slike/food8.jpg",
+        "category": "Doručak",
+        "price": "$8.99",
+        "description": "Jaja, Hleb, Maslac, Marmelada",
+        "buttonText": "ADD TO CART"
+      },
+      {
+        "title": "Album 6",
+        "image": "../slike/food9.jpg",
+        "category": "Doručak",
+        "price": "$8.99",
+        "description": "Jaja, Hleb, Maslac, Marmelada",
+        "buttonText": "ADD TO CART"
+      },
+      {
+        "title": "Album 7",
+        "image": "../slike/food10.jpg",
+        "category": "Doručak",
+        "price": "$8.99",
+        "description": "Jaja, Hleb, Maslac, Marmelada",
+        "buttonText": "ADD TO CART"
+      },
+      {
+        "title": "Album 8",
+        "image": "../slike/food11.jpg",
+        "category": "Doručak",
+        "price": "$8.99",
+        "description": "Jaja, Hleb, Maslac, Marmelada",
+        "buttonText": "ADD TO CART"
+      },
+      {
+        "title": "Album 9",
+        "image": "../slike/food12.jpg",
+        "category": "Special Menu",
+        "price": "$1",
+        "description": "Jaja, Hleb, Maslac, Marmelada",
+        "buttonText": "ADD TO CART"
+      }
+    ]
+  }
+  
